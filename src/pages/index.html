@@ -1,153 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WTF: Webpack starter kit</title>
-    <meta name="description" content="Your project description" />
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta
-      property="og:image"
-      content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png"
-    />
+<html lang="pl">
 
-    <!-- uncomment the line below to enable PWA  -->
-    <!-- <link rel="manifest" href="manifest.json" /> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="pwa/apple-icon-180.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="167x167"
-      href="pwa/apple-icon-167.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="pwa/apple-icon-152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="pwa/apple-icon-120.png"
-    />
+<body>
+    <header class="header">
+      <div>
+        <button class="hamburger hamburger--js" aria-label="Otwórz menu">🍔</button>
+        <nav class="navigation navigation--js">
+            <a class="navigation__link navigation__link--homepage" href="index.html">Strona główna</a>
+            <a class="navigation__link" href="nauka-html.html">Nauka HTML</a>
+            <a class="navigation__link" href="nauka-css.html">Nauka CSS</a>
+            <a class="navigation__link" href="nauka-js.html">Nauka JS</a>
+            <a class="navigation__link" href="grid-layout.html">Grid layout</a>
+        </nav>
+      </div>
+    </header>
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <main class="middle-space">
+        <header id="top">
+            <h1 class="middle-space__header middle-space__header--js">Artur Kurek – Strona domowa</h1>
+            <button class="action--js">Zmień nagłówek</button>
+            <p>Początek dnia: <span class="time--js"></span></p>
+        </header>
+        <section class="about">
+            <img class ="about__img" src="../assets/img/Artur.jpg" alt="artur-jpg" width="350" height="450">
+            <h2 class="about__heading"> Kim jestem?</h2>
 
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-2732.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2732-2048.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2388.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2388-1668.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2224.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2224-1668.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1536-2048.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-1536.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2688.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2688-1242.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1125-2436.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2436-1125.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-828-1792.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1792-828.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2208.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2208-1242.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-750-1334.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1334-750.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-640-1136.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1136-640.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-  </head>
-  <body>
-    <div class="hello">
-      <img class="hello__logo" src="../assets/img/logo.svg" alt="WTF " />
-      <span class="hello__circles"></span>
-    </div>
-  </body>
+            <p class="about__description">Na co dzień studiuję Psychologię w Zarządzaniu w Akademii Leona Koźmińskiego. W ostatnim czasie
+            zainteresowałem się tematyką programowania. Okazuje się to być interesującym, a także kreatywnym zajęciem. <br/>
+            Chciałbym poszerzyć swoje umiejętności tworzenia stron internetowych i zdobyć pracę jako Junior Frontend
+            Developer. Poza tym interesuję się muzyką i tenisem ziemnym. <a href="#WTF">Przejdź do notatek</a></p>
+        </section>
+
+        <section class="notes">
+
+            <h2 class="notes__heading" id="WTF"> Notatki - WTF Co Ten Frontend</h2>
+
+           
+               <article class="language-info">
+                <h3 class="language-info__heading">HyperText Markup Language - HTML</h3>
+                <p class="language-info__description">Hipertekstowy język znaczników, wykorzystywany do tworzenia dokumentów hipertekstowych. HTML pozwala
+                opisać strukturę informacji zawartych wewnątrz strony internetowej, nadając odpowiednie znaczenie<br/>
+                semantyczne poszczególnym fragmentom tekstu – formując hiperłącza, akapity, nagłówki, listy – oraz
+                osadza w tekście dokumentu obiekty plikowe np. multimedia bądź elementy baz danych np. interaktywne
+                formularze danych.<br/> HTML umożliwia określenie wyglądu dokumentu w przeglądarce internetowej. Do
+                szczegółowego opisu formatowania akapitów, nagłówków, użytych czcionek i kolorów, zalecane jest
+                wykorzystywanie kaskadowych arkuszy stylów.</p>
+               </article> 
+            
+
+            <article class="language-info">
+                <h3 class="language-info__heading">Cascading Style Sheets – CSS </h3>
+                <p class="language-info__description">Język służący do opisu formy prezentacji (wyświetlania) stron WWW. CSS został opracowany przez
+                organizację W3C> w 1996 r. Arkusz stylów CSS to lista dyrektyw (tzw. reguł) ustalających w jaki sposób ma
+                zostać wyświetlana<br/> przez przeglądarkę internetową zawartość wybranego elementu (lub elementów) (X)HTML
+                lub XML. Można w ten sposób opisać wszystkie pojęcia odpowiedzialne za prezentację elementów dokumentów
+                internetowych, takie jak rodzina czcionek,<br> kolor tekstu, marginesy, odstęp międzywierszowy lub nawet
+                pozycja danego elementu względem innych elementów bądź okna przeglądarki. Wykorzystanie arkuszy stylów
+                daje znacznie większe możliwości pozycjonowania elementów na stronie,<br> niż oferuje sam (X)HTML.</p>
+            </article>
+
+            <article class="language-info">
+                <h3 class="language-info__heading language-info__heading--JS">JavaScript - JS</h3>
+                <p class="language-info__description">JavaScript (w skrócie JS) – skryptowy język programowania, stworzony przez firmę Netscape, najczęściej stosowany na stronach internetowych. </br>Twórcą JavaScriptu jest Brendan Eich. W połowie lat 90. XX wieku organizacja ECMA wydała na podstawie JavaScriptu standard języka skryptowego o nazwie ECMAScript, aktualnie rozwijaniem tego standardu zajmuje się komisja TC39.</p>
+
+                <p class="language-info__description language-info__description--JS"> Dobiorę się do tej treści przy pomocy JS</p> 
+                
+            </article> 
+
+
+
+        </section>
+
+        <section class="lists">
+            <h4 class="lists__heading">Lista fajnych znaczników</h4>
+            <ul class="lists__style">
+                <li class="lists__item">UL</li>
+                <li class="lists__item">OL</li>
+                <li class="lists__item">SECTION</li>
+                    <ol>
+                        <li>Something1</li>
+                        <li>Something2</li>
+                        <li>Something3</li>
+                    </ol>
+            </ul>
+            <dl>
+                <dt>div</dt>
+                <dd>Opis mojego diva</dd>
+
+                <dt>article</dt>
+                <dd>Opis mojego artykułu</dd>
+
+            </dl>
+            
+        </section>
+
+        <section class="lists">
+            <h4 class="lists__heading">Kroki do zrobienia dobrego HTML-a</h4>
+            <ol>
+                <li>Przeanalizuj treść</li>
+                <li>Podziel ją na sekcje</li>
+                <li>Utwórz pierwszą sekcję kodu</li>
+            </ol>
+        </section>
+
+        <section>
+            <h4>Rozpiska WTF</h4>
+            <table class="table">
+                <caption>Spis odcinków WTF: Co ten Frontend</caption>
+                <thead>
+                    <tr>
+                        <th>lp</th>
+                        <th>tytuł</th>
+                        <th>czas trwania</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>Powitanie</td>
+                        <td>05:45</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</td>
+                        <td>12:45</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <h4><b>Strona domowa – Artur Kurek, wszystkie treści są efektem nauki szkolenia
+          WTF: Co Ten Frontend</b></footer></h4> <a href="#top">Powrót na górę</a>
+      </footer>
+</body>
 </html>

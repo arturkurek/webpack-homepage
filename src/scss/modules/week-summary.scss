@@ -1,0 +1,16 @@
+.navigation {
+    padding: 16px;
+    display: none;
+    &__link {
+      color: rgb(37, 103, 129);
+      display: block;
+      margin-right: 0 0 14px;
+      font-size: 20px;
+    }
+    &__link--homepage {
+      color: rgb(160, 180, 211);
+    }
+    &--open {
+      display: block;
+    }
+  }

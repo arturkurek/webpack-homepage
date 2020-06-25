@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: "./src/js/index.js",
     another: "./src/js/another.js",
+    main2: "./src/js/main2.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -93,6 +94,30 @@ module.exports = {
       inject: true,
       chunks: ["index", "another"],
       filename: "artur.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/grid-layout.html",
+      inject: true,
+      chunks: ["index", "another", "grid-layout"],
+      filename: "grid-layout.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/nauka-css.html",
+      inject: true,
+      chunks: ["index", "another", "grid-layout", "nauka-css"],
+      filename: "nauka-css.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/nauka-html.html",
+      inject: true,
+      chunks: ["index", "another", "grid-layout", "nauka-css", "nauka-html"],
+      filename: "nauka-html.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/nauka-js.html",
+      inject: true,
+      chunks: ["index", "another", "grid-layout", "nauka-css", "nauka-html", "nauka-js"],
+      filename: "nauka-js.html",
     }),
   ],
 };
