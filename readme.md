@@ -6,7 +6,7 @@ Moja strona domowa
 
 ## Jak to odpalić
 
-Najpierw `npm install`, a później masz następujące opcje:
+Najpierw wpisz `npm install`, a później masz następujące opcje:
 
 
 `npm run start` - runs development mode
