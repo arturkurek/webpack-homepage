@@ -48,11 +48,6 @@ function calculateOld(myNumber)  {
 
 const calculate = (myNumber) => myNumber*7
 
-const myResult = calculate(7)
-console.log (myResult)
-
-
-
 
 function createContent(querySelectorContent, content) {
     
@@ -127,18 +122,9 @@ console.log(humanOne);
 console.log(humanTwo);
 
 
-const button = document.querySelector('.action--js');
 
-console.log(button)
 
-const myClick = () => {
-  const heading = document.querySelector(".middle-space__header--js");
-  heading.innerHTML = `Siemanko!`;
-  heading.classList.toggle('klasa-z-js');
-  console.log(heading.classList.contains('middle-space__header--js'));
-}
 
-button.addEventListener('click', myClick);
 
 const hamburger = document.querySelector('.hamburger--js');
 
@@ -152,3 +138,41 @@ const startOfDay = moment().startOf('day').fromNow();
 const timePlaceholder = document.querySelector('.time--js');
 
 timePlaceholder.innerHTML = startOfDay;
+
+document.cookie = 'name = artur' 
+document.cookie = 'test = korsi' 
+
+
+localStorage.setItem('nowyKlucz', JSON.stringify({name:'artur'}));
+
+const myResult = localStorage.getItem('nowyKlucz');
+
+console.log(JSON.parse(myResult));
+
+const myNewObject = JSON.parse(myResult);
+
+myNewObject.newProperty = 'hi';
+
+console.log(myNewObject)
+
+
+const entry = localStorage.getItem('entry');
+let result = '';
+
+if (entry) {
+  console.log (`wartość entry: ${entry}`)
+  result = entry;
+}
+
+
+const entryInput = document.querySelector('.entry--js');
+entryInput.value = result;
+
+const button = document.querySelector('.action--js');
+
+console.log(button)
+
+button.addEventListener('click', () => {
+      localStorage.setItem('entry', entryInput.value);
+});
+
